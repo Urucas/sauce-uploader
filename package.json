@@ -1,5 +1,5 @@
 {
-  "name": "sauce-updaloder",
+  "name": "sauce-uploader",
   "version": "1.0.2",
   "description": "Uploading apk &amp; ipa to Sauce Labs from nodejs",
   "main": "./dist/index.js",
@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Urucas/sauce-updaloder.git"
+    "url": "git+https://github.com/Urucas/sauce-uploader.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Urucas/sauce-updaloder/issues"
+    "url": "https://github.com/Urucas/sauce-uploader/issues"
   },
-  "homepage": "https://github.com/Urucas/sauce-updaloder#readme",
+  "homepage": "https://github.com/Urucas/sauce-uploader#readme",
   "devDependencies": {
     "babel": "^5.8.23",
     "grunt": "^0.4.5",
