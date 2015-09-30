@@ -1,7 +1,7 @@
 # sauce-uploader [![Build Status](https://travis-ci.org/Urucas/sauce-uploader.svg)](https://travis-ci.org/Urucas/sauce-updaloder)
 
-Are yu planning to run some Appium tests on Sauce Labs ? Make sure you upload
-your app first. Use sauce-uploader, let him handle it for you.
+Are you planning to run some Appium tests on Sauce Labs ? 
+Make sure you upload your app first. Use **sauce-uploader**, let him handle it for you.
 
 #Install
 ```bash
