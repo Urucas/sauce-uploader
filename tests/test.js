@@ -111,4 +111,23 @@ describe("Test sauce-uploader", () => {
        throw new Error("response returned should be null or plain object")
     done();
   })
+
+  it("should handle response callback", (done) => {
+    // create tmp file
+    let tmp = path.join(process.cwd(), "tests", "tmp.apk")
+    fs.closeSync(fs.openSync(tmp,'w+'))
+    let settings = {
+      user: "user1",
+      access_key: "acccess_key1",
+      app_path: tmp
+    }
+    uploader.upload(settings, (err, response) => {
+      if(err != null && err.constructor.name != "Error")
+        throw new Error("error returned should be null or instance of Error");
+      if(response != null && !isPlain(response))
+        throw new Error("response returned should be null or plain object")
+      done();
+    });
+  })
+
 })
