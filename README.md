@@ -9,7 +9,7 @@ npm install --save sauce-uploader
 ```
 
 #Usage
-** API **
+**API**
 ```javascript
 import uploader from 'sauce-uploader'
 uploader.upload({user:user, access_key:access_key, app_path:app_path}, (err, response) {
@@ -19,3 +19,6 @@ uploader.upload({user:user, access_key:access_key, app_path:app_path}, (err, res
 let [err, response] = uploader.uploadSync({});
 ```
 
+
+#Requirements
+* curl
