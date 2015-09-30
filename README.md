@@ -1,4 +1,4 @@
-# sauce-uploader [![Build Status](https://travis-ci.org/Urucas/sauce-updaloder.svg)](https://travis-ci.org/Urucas/sauce-updaloder)
+# sauce-uploader [![Build Status](https://travis-ci.org/Urucas/sauce-uploader.svg)](https://travis-ci.org/Urucas/sauce-updaloder)
 
 Are yu planning to run some Appium tests on Sauce Labs ? Make sure you upload
 your app first. Use sauce-uploader, let him handle it for you.
@@ -12,9 +12,33 @@ npm install --save sauce-uploader
 **API**
 ```javascript
 import uploader from 'sauce-uploader'
-let settings = {user:"user", access_key:"access_key", app_path:"full_path_to_app"}
+let settings = {user: keys["user"], access_key: keys["accessKey"], app_path: "full_path_to_app"}
 uploader.upload(settings, (err, response) {
-   // handle callback
+   /* handle callback response
+    * { username: 'vrunoa',
+    *   size: 1423095,
+    *   md5: '68e280e4de9116e2d095e13cca25cd68',
+    *  filename: 'app-debug.apk' }
+    */
+   // set the capabilities for your appium tests
+   let app = ["sauce-storage", response["filename"]].join(":")
+   let capabilities = {
+     "deviceName":"Android",
+     "host":"ondemand.saucelabs.com",
+     "port":80,
+     "app" : app,
+     "username" : keys["user"],
+     "accessKey": keys["accessKey"],
+     "app-package":"com.urucas.kriket",
+     "appWaitActivity": "com.urucas.kriket.activities.LoginActivity",
+     "browserName" : "",
+     "platformName":"Android",
+     "deviceName": "Android Emulator",
+     "platformVersion": "5.0", 
+     "appium-version" : "1.4.7"
+   }
+   // run your tests
+   // ...
 });
 
 // sync
@@ -29,6 +53,14 @@ npm install -g sauce-uploader
 sauce-uploader <user> <access_key> <full_path_to_app> [--verbose]
 ```
 
+#Example
+Before running the example inside **[example](https://github.com/Urucas/sauce-uploader/tree/master/example)** folder, make sure you addd your current Sauce Labs [keys](https://docs.saucelabs.com/reference/rest-api/).
+```bash
+cd examples
+npm install
+npm test
+```
+Go to Sauce Labs [dashboard](https://saucelabs.com/beta/dashboard/tests) and watch it running!
 
 #Requirements
 * curl
