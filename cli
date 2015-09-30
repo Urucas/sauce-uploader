@@ -11,7 +11,7 @@ if(argv.indexOf("--help") != -1) {
 var uploader = require('./dist/')
 var result = uploader.uploadSync({
   user: argv[0],
-  access_ket: argv[1],
+  access_key: argv[1],
   app_path: argv[2],
   verbose: (argv[3] && argv[3] == "--verbose"? true : false)
 })
