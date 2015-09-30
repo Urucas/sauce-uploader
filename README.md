@@ -12,12 +12,15 @@ npm install --save sauce-uploader
 **API**
 ```javascript
 import uploader from 'sauce-uploader'
-uploader.upload({user:user, access_key:access_key, app_path:app_path}, (err, response) {
+let settings = {user:"user", access_key:"access_key", app_path:"full_path_to_app"}
+uploader.upload(settings, (err, response) {
+   // handle callback
 });
 
 // sync
-let [err, response] = uploader.uploadSync({});
+let [err, response] = uploader.uploadSync(settings);
 ```
+Voila! Now run your appium test on Sauce Labs cloud!
 
 
 #Requirements
