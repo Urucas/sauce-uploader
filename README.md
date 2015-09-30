@@ -20,7 +20,14 @@ uploader.upload(settings, (err, response) {
 // sync
 let [err, response] = uploader.uploadSync(settings);
 ```
-Voila! Now run your appium test on Sauce Labs cloud!
+
+Now run your appium test on Sauce Labs cloud!
+
+**CLI**
+```bash
+npm install -g sauce-uploader
+sauce-uploader <user> <access_key> <full_path_to_app> [--verbose]
+```
 
 
 #Requirements
