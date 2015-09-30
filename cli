@@ -1,0 +1,20 @@
+#!/usr/bin/env node
+var argv = process.argv.slice(2)
+var logger = require("semafor")()
+if(argv.indexOf("--help") != -1) {
+  console.log([
+    "Usage; ",
+    " sauce-uploader <user> <access_key> <full_path_to_app> [--verbose]"
+    ].join("\n"))
+  process.exit(0)
+}
+var uploader = require('./dist/')
+var result = uploader.uploadSync({
+  user: argv[0],
+  access_ket: argv[1],
+  app_path: argv[2],
+  verbose: (argv[3] && argv[3] == "--verbose"? true : false)
+})
+var err = result[0]
+if(err) return logger.fail(err.message)
+logger.log(result[1])
