@@ -37,7 +37,7 @@ uploader.upload(settings, (err, response) {
      "platformVersion": "5.0", 
      "appium-version" : "1.4.7"
    }
-   // run your tests
+   // set the wd capabilities and run your tests
    // ...
 });
 
