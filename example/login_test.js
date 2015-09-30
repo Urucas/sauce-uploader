@@ -25,7 +25,7 @@ var caps = {
   "username" : keys["user"],
   "accessKey": keys["accessKey"],
   "app-package":"com.urucas.kriket",
-  "app-wait-activity": "com.urucas.kriket.activities.LoginActivity",
+  "appWaitActivity": "com.urucas.kriket.activities.LoginActivity",
   "browserName" : "",
   "platformName":"Android",
   "deviceName": "Android Emulator",
