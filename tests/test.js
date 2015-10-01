@@ -94,7 +94,8 @@ describe("Test sauce-uploader", () => {
     }
     done();
   })
-
+  
+  
   it("should return a destructure response [err, response]", (done) => {
     // create tmp file
     let tmp = path.join(process.cwd(), "tests", "tmp.apk")
@@ -111,14 +112,14 @@ describe("Test sauce-uploader", () => {
        throw new Error("response returned should be null or plain object")
     done();
   })
-
+  
   it("should handle response callback", (done) => {
     // create tmp file
-    let tmp = path.join(process.cwd(), "tests", "tmp.apk")
+    let tmp = path.join(process.cwd(), "example", "app-debug.apk")
     fs.closeSync(fs.openSync(tmp,'w+'))
     let settings = {
       user: "user1",
-      access_key: "acccess_key1",
+      access_key: "access_key1",
       app_path: tmp
     }
     uploader.upload(settings, (err, response) => {

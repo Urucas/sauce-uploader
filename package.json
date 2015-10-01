@@ -4,7 +4,7 @@
   "description": "Uploading apk &amp; ipa to Sauce Labs from nodejs",
   "main": "./dist/index.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha tests/* --compilers js:babel/register -t 15s",
+    "test": "./node_modules/mocha/bin/mocha tests/* --compilers js:babel/register -t 0",
     "build": "./node_modules/grunt-cli/bin/grunt build"
   },
   "bin": {
@@ -29,6 +29,10 @@
     "mocha": "^2.3.3"
   },
   "dependencies": {
-    "semafor": "0.0.1"
+    "co": "^4.6.0",
+    "monocle-js": "^1.0.2",
+    "request": "^2.64.0",
+    "semafor": "0.0.1",
+    "sync-request": "^2.0.1"
   }
 }
