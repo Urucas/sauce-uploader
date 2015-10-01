@@ -15,7 +15,6 @@ if(result[0] != null) {
   console.log(result[0]);
   return;
 }
-console.log(result[1]);
 var app = ["sauce-storage", result[1]["filename"].trim()].join(":")
 var caps = {
   "deviceName":"Android",

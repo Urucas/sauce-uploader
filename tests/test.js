@@ -73,29 +73,6 @@ describe("Test sauce-uploader", () => {
     done();
   })
 
-  it("should create the correct curl_url params", (done) => {
-    let settings = {
-      user: "user1",
-      access_key: "acccess_key1",
-      app_path: "tmp1.apk"
-    }
-    let curl_url = uploader.getCurlUrl(settings)
-    let params   = uploader.getParams(settings, curl_url)
-
-    let must_params = [
-      "-u", settings.user+":"+settings.access_key, "-X",
-      "POST", "-H", "Content-Type: application/octet-stream",
-      curl_url,  "--data-binary", "@"+settings.app_path
-
-    ]
-    for(let key in must_params) {
-      if(params.indexOf(must_params[key]) == -1)
-        throw new Error("Missing param, "+must_params[key])
-    }
-    done();
-  })
-  
-  
   it("should return a destructure response [err, response]", (done) => {
     // create tmp file
     let tmp = path.join(process.cwd(), "tests", "tmp.apk")
@@ -115,7 +92,7 @@ describe("Test sauce-uploader", () => {
   
   it("should handle response callback", (done) => {
     // create tmp file
-    let tmp = path.join(process.cwd(), "example", "app-debug.apk")
+    let tmp = path.join(process.cwd(), "tests", "tmp.apk")
     fs.closeSync(fs.openSync(tmp,'w+'))
     let settings = {
       user: "user1",
