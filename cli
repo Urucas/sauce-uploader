@@ -17,4 +17,4 @@ var result = uploader.uploadSync({
 })
 var err = result[0]
 if(err) return logger.fail(err.message)
-logger.log(result[1])
+logger.log(JSON.stringify(result[1], ""))
