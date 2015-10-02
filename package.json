@@ -1,6 +1,6 @@
 {
   "name": "sauce-uploader",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Uploading apk &amp; ipa to Sauce Labs from nodejs",
   "main": "./dist/index.js",
   "scripts": {
