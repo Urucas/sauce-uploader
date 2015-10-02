@@ -54,10 +54,19 @@ sauce-uploader <user> <access_key> <full_path_to_app> [--verbose]
 ```
 
 #Example
-Before running the example inside **[example](https://github.com/Urucas/sauce-uploader/tree/master/example)** folder, make sure you addd your current Sauce Labs [keys](https://docs.saucelabs.com/reference/rest-api/).
+Before running the examples inside **[example/mocha](https://github.com/Urucas/sauce-uploader/tree/master/example/mocha)** folder, make sure you addd your current Sauce Labs [keys](https://docs.saucelabs.com/reference/rest-api/).
+
+* Node
 ```bash
-cd examples
+cd example/mocha
 npm install
 npm test
 ```
+
+* Python
+```bash
+cd example/python
+python login_test.py
+```
+
 Go to Sauce Labs [dashboard](https://saucelabs.com/beta/dashboard/tests) and watch it running!
