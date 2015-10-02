@@ -1,6 +1,6 @@
 # sauce-uploader [![Build Status](https://travis-ci.org/Urucas/sauce-uploader.svg)](https://travis-ci.org/Urucas/sauce-updaloder)
 
-Are you planning to run some Appium tests on Sauce Labs ? 
+Are you planning to run some Appium tests on Sauce Labs ?
 Make sure you upload your app first. Use **sauce-uploader**, let him handle it for you.
 
 #Install
@@ -61,6 +61,3 @@ npm install
 npm test
 ```
 Go to Sauce Labs [dashboard](https://saucelabs.com/beta/dashboard/tests) and watch it running!
-
-#Requirements
-* curl
