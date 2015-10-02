@@ -21,6 +21,7 @@ class SauceUploadTests(unittest.TestCase):
         with open(keys_path) as data:
             keys = json.load(data)
 
+        # upload ap using sauce-uploader cli
         result = subprocess.check_output(["sauce-uploader", keys["user"], keys["accessKey"], app_path])
         response = json.loads(result)
         try:
@@ -56,9 +57,9 @@ class SauceUploadTests(unittest.TestCase):
         el = self.driver.find_element_by_id("userEmail")
         self.assertIsNotNone(el)
         self.assertTrue(el.is_displayed())
-        el.set_value("test@test.com")
+        el.send_keys('test@test.com')
         text = el.get_attribute("text")
-        self.assertEqual("test@test.com", text)
+        self.assertEqual('test@test.com', text)
 
         el = self.driver.find_element_by_id("userPass")
         self.assertIsNotNone(el)
