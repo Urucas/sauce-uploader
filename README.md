@@ -70,3 +70,5 @@ python login_test.py
 ```
 
 Go to Sauce Labs [dashboard](https://saucelabs.com/beta/dashboard/tests) and watch it running!
+
+<img src="https://raw.githubusercontent.com/Urucas/sauce-uploader/master/screen.png" />
