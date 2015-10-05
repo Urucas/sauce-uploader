@@ -58,13 +58,22 @@ Before running the examples inside **[example/mocha](https://github.com/Urucas/s
 
 * Node
 ```bash
+# build sauce-uploader lib
+npm install
+npm run build
+# build tests
 cd example/mocha
 npm install
+# run appium test
 npm test
 ```
 
 * Python
 ```bash
+# build sauce-uploader lib
+npm install
+npm run build
+# run appium test
 cd example/python
 python login_test.py
 ```
